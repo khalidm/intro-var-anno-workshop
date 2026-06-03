@@ -1,5 +1,5 @@
 ---
-title: "Using RMarkdown"
+title: "Using RMarkdown for MB workshops"
 teaching: 10
 exercises: 2
 ---
