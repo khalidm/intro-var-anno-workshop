@@ -11,16 +11,16 @@
 carpentry: 'uom'
 
 # Alt-text description of the lesson.
-carpentry_description: 'Lesson Description' # FIXME
+carpentry_description: 'Introduction to Variant Annotation' # FIXME
 
 # Overall title for pages.
-title: 'Lesson Title' # FIXME
+title: 'Introduction to Variant Annotation' # FIXME
 
 # Date the lesson was created ('YYYY-MM-DD', this is empty by default)
 created: ~ # FIXME
 
 # Comma-separated list of keywords for the lesson. Avoid words in the title.
-keywords: 'software, data, lesson' # FIXME
+keywords: 'genetic variants, annotation, gene, software, data, lesson' # FIXME
 
 # Life cycle stage of the lesson
 # refer to <https://docs.carpentries.org/resources/curriculum/lesson-life-cycle.html> for details
