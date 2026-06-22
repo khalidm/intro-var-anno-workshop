@@ -1,19 +1,22 @@
 ---
-title: "Using RMarkdown for MB workshops"
+title: "Introduction to Variant Annotation"
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using R Markdown and `{sandpaper}`?
+- What is variant annotation?
+- How do you annotate variants?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with the new lesson template
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Assign biological feature and meaning to genetic variations
+- Explain how to annotate variants
+- What tools and methods are used to annotate variants
+- Explain how variant annotations are used to prioritise variants
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -78,9 +81,9 @@ You can also include figures generated from R Markdown:
 
 ```{r pyramid, fig.alt = "pie chart illusion of a pyramid", fig.cap = "Sun arise each and every morning"}
 pie(
-  c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5), 
-  init.angle = 315, 
-  col = c("deepskyblue", "yellow", "yellow3"), 
+  c(Sky = 78, "Sunny side of pyramid" = 17, "Shady side of pyramid" = 5),
+  init.angle = 315,
+  col = c("deepskyblue", "yellow", "yellow3"),
   border = FALSE
 )
 ```

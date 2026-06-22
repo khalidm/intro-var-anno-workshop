@@ -64,6 +64,12 @@ contact: 'fixme@fixme.org' # FIXME
 # Order of episodes in your lesson
 episodes: 
 - introduction.Rmd
+- what-is-var-anno.Rmd
+- tools.Rmd
+- resources.Rmd
+# - how-to-annotate.Rmd
+# - variant-prioritisation.Rmd
+
 
 # Information for Learners
 learners: 
