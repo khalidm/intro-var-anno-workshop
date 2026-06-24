@@ -36,18 +36,21 @@ This workshop utilzes a dataset of variants derived from \<insert details\>. The
 
 [Click here for further information about the dataset](https://posit.co/download/rstudio-desktop/) and methods used to extract the VCF with regions of intereset is as follows:
 
+<!-- tabix -h https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGSVC3/release/Variant_Calls/1.0/GRCh38/vcf_with_unphased/variants_GRCh38_snv_snv_alt_with-unphased_HGSVC2024v1.0.vcf.gz chr22:20,000,000-20,100,000 > workshop_1000g_multi_sample.vcf -->
+
 ```bash
-tabix -h https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/HGSVC3/release/Variant_Calls/1.0/GRCh38/vcf_with_unphased/variants_GRCh38_snv_snv_alt_with-unphased_HGSVC2024v1.0.vcf.gz chr22:20,000,000-20,100,000 > workshop_1000g_multi_sample.vcf
-tabix -h tabix -h https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20201028_3202_raw_GT_with_annot/20201028_CCDG_14151_B01_GRM_WGS_2020-08-05_chr2.recalibrated_variants.vcf.gz chr2:46,362,272-48,524,107 > workshop_1000g_multi_sample.vcf
+tabix -h https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20201028_3202_raw_GT_with_annot/20201028_CCDG_14151_B01_GRM_WGS_2020-08-05_chr2.recalibrated_variants.vcf.gz chr2:46,362,272-48,524,107 > workshop_1000g_multi_sample.vcf
 ```
 
-This is a multi-sample VCF file containing variants from \<XX\> participants in the chromosome regions chr22:20,000,000-20,100,000.
+This command generates a multi-sample VCF file, ```workshop_1000g_multi_sample.vcf```, covering the region chr2:46,362,272–48,524,107 (GRCh38). This file contains 103,775 variants across 3,202 samples.
 
 ::::::::::::::::::::::::::::
 
 ::::::::::::::::: checklist
 
 ### Tools setup
+
+#### Ensembl Variant Effect Predictor (VEP)
 
 The workshop will use the ENSEMBL Variant Effect Predictor (VEP) tools. The instruction to install VEP are avalable [here](https://useast.ensembl.org/info/docs/tools/vep/script/vep_download.html). The website also provides a web interface to the application but for this workshop we will use the command line tool.
 
@@ -71,10 +74,21 @@ tar xzf homo_sapiens_vep_116_GRCh38.tar.gz
 # 4. Test
 ./vep -i examples/homo_sapiens_GRCh38.vcf --cache
 
-
 ```
 
 More details on the VEP command line tool and detailed instructions see the [documentation](https://useast.ensembl.org/info/docs/tools/vep/script/index.html). Most workshops using R will require the installation of specific packages. Make sure to check in advance with the workshop organisers what packages need to be installed.
+
+#### BCFTools
+
+Detailed instructions to install BCFtools are available [here](https://www.htslib.org/download/).
+
+Alternatively use conda as follows:
+
+```bash
+
+conda install -c bioconda bcftools
+
+``` 
 
 ::::::::::::::::::::::::::::
 
