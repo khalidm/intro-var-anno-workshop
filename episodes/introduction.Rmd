@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Variant Annotation"
+title: "Introduction"
 teaching: 10
 exercises: 2
 ---
@@ -24,7 +24,7 @@ exercises: 2
 options(digits = 3)
 ```
 
-## Introduction
+## Overview
 
 This is an introduction to variant annotation. We will cover the basics of what 
 variant annotation is, how it works, and why it is important in genomics research 
