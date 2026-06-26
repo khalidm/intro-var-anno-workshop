@@ -222,6 +222,7 @@ e.g. by providing the answer to a commonly-asked question.
 
 ## Math
 
+Examples of mathematical notation can be included in R Markdown using $\LaTeX$ syntax. For example, the quadratic formula can be written as:
 One of our episodes contains $\LaTeX$ equations when describing how to create
 dynamic reports with {knitr}, so we now use mathjax to describe this:
 

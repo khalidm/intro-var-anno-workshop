@@ -4,12 +4,9 @@ teaching: 10 # teaching time in minutes
 exercises: 2 # exercise time in minutes
 ---
 
-- [ ] Fundamentals of variant annotation
-- [ ] Explore tools and resources for variant annotation
-- [ ] Predicting variant consequneces
-- [ ] Annotating allele frequency
-- [ ] Annotating predictive variant effect
-- [ ] Prioritising variants
+- [ ] Basic of VCF file format
+- [ ] Decomposing and normalizing variants
+- [ ] Indexing and exploring using Tabix
 
 ## What is variant annotation?
 Variant Annotation is the computational process of intersecting raw genomic coordinates (typically from a VCF file) with curated biological databases to assign genetic consequence, functional annotation, and population-level metadata to each identified sequence variation.
