@@ -1,8 +1,28 @@
 ---
-title: "Variant Annotation Workflow"
+title: "Variant Annotation"
 teaching: 10 # teaching time in minutes
 exercises: 2 # exercise time in minutes
 ---
+
+What is Variant Annotation? Translating genomic coordinates into biological meaning
+
+The Role of VEP: Overview of Ensembl Variant Effect Predictor for consequence prediction
+
+Key Concepts in Interpretation:
+Understanding Pathogenicity (Benign to Pathogenic)
+
+The importance of Allele Frequency (gnomAD)
+
+Role of In-silico Predictors in clinical workflows
+
+
+
+
+Here is a brief overview of the variant annotation workflow. The workflow typically 
+starts with a VCF file containing genetic variants, which is then processed through 
+various tools and databases to assign biological context and functional information 
+to each variant. The annotated variants can then be prioritized based on their 
+potential impact on health and disease.
 
 - [ ] Fundamentals of variant annotation
 - [ ] Explore tools and resources for variant annotation
