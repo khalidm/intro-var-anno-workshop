@@ -52,7 +52,7 @@ This command generates a multi-sample VCF file, ```workshop_1000g_multi_sample.v
 
 #### Ensembl Variant Effect Predictor (VEP)
 
-The workshop will use the ENSEMBL Variant Effect Predictor (VEP) tools. The instruction to install VEP are avalable [here](https://useast.ensembl.org/info/docs/tools/vep/script/vep_download.html). The website also provides a web interface to the application but for this workshop we will use the command line tool.
+The workshop will use the ENSEMBL Variant Effect Predictor (VEP) tool for variant annotation. The instruction to install VEP are avalable [here](https://useast.ensembl.org/info/docs/tools/vep/script/vep_download.html). The website also provides a web interface to the application but for this workshop we will use the command line tool.
 
 You can install packages from CRAN using:
 
@@ -80,7 +80,7 @@ More details on the VEP command line tool and detailed instructions see the [doc
 
 #### BCFTools
 
-Detailed instructions to install BCFtools are available [here](https://www.htslib.org/download/).
+We will also require [BCFtools](https://www.htslib.org/doc/bcftools.html), a widely used command-line tool for processing and analysing genetic variant files in VCF format. Detailed instructions to install BCFtools are available [here](https://www.htslib.org/download/).
 
 Alternatively use conda as follows:
 

@@ -53,9 +53,17 @@ Carpentries lesson template:
 ::::::::::::::::::::::::::::::::::::: callout
 <!-- Callout sections can highlight information. -->
 
-Our starting point for RNA-seq analysis will be a list of variants in a VCF file. See previous 
-variant calling workshops for how to go from raw sequencing data to a VCF file. We won’t cover 
-this in the workshop, but we will cover how to annotate variants in a VCF file.
+Our starting point for variant annotation analysis will be a list of variants in VCF 
+file format. This is usually the output of a variant calling pipeline such as the GATK4 
+pipeline in the figure below. See previous variant calling workshops for how to go 
+from raw sequencing data to a VCF file. We won’t cover this in the workshop, but we 
+will cover how to annotate variants in a VCF file.
+
+![](fig/Fig1_GATK4.png){width=75%}
+
+Figure 1: Overview of the GATK4 variant calling pipeline. The GATK4 pipeline is a widely used
+variant calling pipeline that takes raw sequencing data and produces a VCF file containing
+identified variants (highlighted box above), which is the input for variant annotation.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -73,9 +81,9 @@ and examining how common it is across different populations. By providing this i
 variant annotation plays a crucial role in genomic analysis, helping to assess the potential 
 significance of genetic changes in health, disease, and individual patient care.
 
-![](fig/Fig1_var_annotation.png){width=90%}
+![](fig/Fig2_var_annotation.png){width=80%}
 
-Figure 1: Overview of variant annotation. The process of variant annotation involves taking raw 
+Figure 2: Overview of variant annotation. The process of variant annotation involves taking raw 
 genomic coordinates (such as those found in a VCF file) and intersecting them with curated biological 
 databases to assign genetic consequence, functional annotation, and population-level metadata to 
 each identified sequence variation. This helps provide biological context to the variants and can 
@@ -93,10 +101,9 @@ interpret the results of variant annotation and use them to prioritize variants 
 By the end of this workshop, you should have a good understanding of how to perform variant annotation 
 and how to use the results to inform your genomic analyses.
 
-![](fig/Fig2_vcf_example.png){width=90%}
+![](fig/Fig3_vcf_example.png){width=90%}
 
-Figure 2: An example VCF file can be found here
-
+Figure 3: An example VCF file can be found here
 
 The important variant information colums in a VCF file include: 
 CHROM, POS, ID, REF, ALT, QUAL, FILTER, INFO. 
@@ -104,22 +111,43 @@ The CHROM and POS columns provide the genomic coordinates of the variant, while 
 the reference and alternate alleles. The INFO column contains additional annotations about the variant, such as its 
 predicted effect on the protein product or its frequency in different populations. Understanding these columns is 
 crucial for performing variant annotation and interpreting the results. 
-Make a table describing the columns in a VCF file and their significance in variant annotation 
-
-CHROM|POS|ID|REF|ALT|QUAL|FILTER|INFO
----|---|---|---|---|---|---|---
-Chromosome|Position|Variant ID|Reference Allele|Alternate Allele|Quality Score|Filter Status|Additional Annotations
 
 
+|Field  | Description           |
+| ----- | --------------------- |
+|CHROM  | Chromosome            |
+|POS    | Position              |
+|ID     | Variant ID, variant identifier (e.g. rsID) |
+|REF    | Reference Allele |
+|ALT    | Alternate Allele: comma-separated list of alternate alleles |
+|QUAL   | Quality Score: score indicating the confidence in the variant call |
+|FILTER | Filter Status: indicates whether the variant passes quality filters |
+|INFO   | Additional Annotations: from variant callers and annotation tools or databases such as VEP, population frequencies, clinical significance |
+Table 1. Important variant information columns in a VCF file.
+
+## Variant annotation workflow
+
+Here is a brief overview of the variant annotation workflow. The workflow typically 
+starts with a VCF file containing genetic variants, which is then processed through 
+various tools and databases to assign biological context and functional information 
+to each variant. The annotated variants can then be prioritized based on their 
+potential impact on health and disease.
+
+![](fig/Fig4_workflow.png){width=90%}
+
+Figure 4: An example variant annotation workflow.
 
 
 
 
+::::::::::::::::::::::::::::::::::::: keypoints 
 
+- Variant annotation is the process of adding biological context to genetic variants
+- Genetic variants are typically stored in a VCF file format
+- The annotation step involves running tools such as VEP to annotate variant consequences
+- Additional external resources and databases are used to enhance variant annotation
 
-
-
-
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 
@@ -200,14 +228,6 @@ dynamic reports with {knitr}, so we now use mathjax to describe this:
 `$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
 
 Cool, right?
-
-::::::::::::::::::::::::::::::::::::: keypoints 
-
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
-
-:::::::::::::::::::::::::::::::::::::::::::::::: -->
+-->
 
 [r-markdown]: https://rmarkdown.rstudio.com/
